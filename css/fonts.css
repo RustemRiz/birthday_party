@@ -1,0 +1,34 @@
+
+@font-face {
+  font-family: "Monplesir script";
+  /* IE9*/
+  src: url("../fonts/Monplesir/Monplesir-script.eot");
+  /* IE6-IE8 */
+  src: url("../fonts/Monplesir/Monplesir-script.eot?#iefix")
+      format("embedded-opentype"),
+    /* chrome、firefox */ url("../fonts/Monplesir/Monplesir-script.woff2")
+      format("woff2"),
+    /* chrome、firefox */ url("../fonts/Monplesir/Monplesir-script.woff")
+      format("woff"),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+      url("../fonts/Monplesir/Monplesir-script.ttf") format("truetype"),
+    /* iOS 4.1- */
+      url("../fonts/Monplesir/Monplesir-script.svg#Monplesir script")
+      format("svg");
+}
+
+
+
+@font-face {
+  font-family: "GlorySignaturePersonalUse";
+  src: url("../fonts/GlorySignaturePersonalUse.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HandwrittenFont1";
+  src: url("../fonts/HandwrittenFont1.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
