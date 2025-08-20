@@ -136,13 +136,23 @@
 		const fullName = searchParams.get('name');
 		
 		const namesStr =  fullName?.includes('_') ?  fullName?.slice(0, fullName.indexOf('_')) : fullName;
-		const onlyNames = namesStr?.split(',').join(' & ');
+		let onlyNames = namesStr?.split(',').join(' & ');
+		
+		const isTatarNames = onlyNames.toLowerCase().includes('ә');
+		if (isTatarNames) {
+			onlyNames = onlyNames.replace('&', 'һәм');
+		}
 		const namesForInput = fullName?.replace(',', ', ').replace('_', ' ');
 		const phone = searchParams.get('phone');
 		const side = searchParams.get('side');
 
 		const guestNamesEl = document.getElementById('guests_names');
-		if (guestNamesEl && onlyNames)	guestNamesEl.innerText = onlyNames;
+		if (guestNamesEl && onlyNames)	{
+			guestNamesEl.innerText = onlyNames;
+			if (isTatarNames) {
+				guestNamesEl.style = "font-family: \"GlorySignaturePersonalUse\",\"Monplesir script\", Arial, serif"
+			}
+		}
 		const nameInputEl = document.getElementById('name');
 		if (nameInputEl && namesForInput) nameInputEl.value = namesForInput;
 		const phoneInputEl = document.getElementById('phone');
